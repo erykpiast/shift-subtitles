@@ -1,5 +1,5 @@
 # shift-subtitles
-Shift subtitles in format TT:TT:TT:subtitle
+Shift subtitles in format hh:mm:ss:text
 
 ### Usage ###
 ```
