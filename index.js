@@ -7,10 +7,9 @@ var offset = parseInt(process.argv[4], 10);
 
 var subtitles = fs.readFileSync(input).toString();
 
-function pad(n, width, z) {
-  z = z || '0';
-  n = n + '';
-  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+function pad ( num, size ) {
+  if (num.toString().length >= size) return num;
+  return ( Math.pow( 10, size ) + Math.floor(num) ).toString().substring( 1 );
 }
 
 var shifted = subtitles.split('\n').map(function(sub) {
